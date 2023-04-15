@@ -1,0 +1,32 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Sun Feb 12 14:38:26 2023
+| Host         : c1-System-Product-Name running 64-bit Ubuntu 20.04.3 LTS
+| Command      : report_utilization -hierarchical -hierarchical_depth 5 -file /home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py/report/net2_prj_report.txt
+| Design       : top_tcb_121_16_10
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Synthesized
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------------+----------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+|        Instance       |        Module        | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | URAM | DSP Blocks |
++-----------------------+----------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+| top_tcb_121_16_10     |                (top) |      32065 |      32065 |       0 |    0 | 1526 |      0 |      0 |    0 |          0 |
+|   (top_tcb_121_16_10) |                (top) |      11142 |      11142 |       0 |    0 |    0 |      0 |      0 |    0 |          0 |
+|   DUT_comparator      |           comparator |        960 |        960 |       0 |    0 |  286 |      0 |      0 |    0 |          0 |
+|   DUT_layer0          | layer0_tcb_121x16x10 |      16514 |      16514 |       0 |    0 |  969 |      0 |      0 |    0 |          0 |
+|   DUT_layer2          | layer2_tcb_121x16x10 |       3871 |       3871 |       0 |    0 |  271 |      0 |      0 |    0 |          0 |
++-----------------------+----------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+
+

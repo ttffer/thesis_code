@@ -1,0 +1,1 @@
+module n13sys(input [5:0]IN0,input [5:0]IN1,output [2:0]OUT0,output [2:0]OUT1,

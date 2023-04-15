@@ -1,0 +1,32 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Thu Feb 23 16:55:51 2023
+| Host         : c1-System-Product-Name running 64-bit Ubuntu 20.04.3 LTS
+| Command      : report_utilization -hierarchical -hierarchical_depth 5 -file ..//report/net2_prj_report.txt
+| Design       : top_tcb_144_16_10
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Synthesized
+-------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------------+----------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+|        Instance       |        Module        | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | URAM | DSP Blocks |
++-----------------------+----------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+| top_tcb_144_16_10     |                (top) |       4611 |       4611 |       0 |    0 | 1102 |      0 |      0 |    0 |          0 |
+|   (top_tcb_144_16_10) |                (top) |        244 |        244 |       0 |    0 |    0 |      0 |      0 |    0 |          0 |
+|   DUT_comparator      |           comparator |        632 |        632 |       0 |    0 |  296 |      0 |      0 |    0 |          0 |
+|   DUT_layer0          | layer0_tcb_144x16x10 |       2823 |       2823 |       0 |    0 |  729 |      0 |      0 |    0 |          0 |
+|   DUT_layer2          | layer2_tcb_144x16x10 |        935 |        935 |       0 |    0 |   77 |      0 |      0 |    0 |          0 |
++-----------------------+----------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+
+

@@ -1,0 +1,1563 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Feb 14 13:40:59 2023
+# Process ID: 122932
+# Current directory: /home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py
+# Command line: vivado -mode tcl -source ./tcl/run_syn.tcl
+# Log file: /home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado.log
+# Journal file: /home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado.jou
+# Running On: c1-System-Product-Name, OS: Linux, CPU Frequency: 3700.000 MHz, CPU Physical cores: 10, Host memory: 33326 MB
+#-----------------------------------------------------------
+source ./tcl/run_syn.tcl
+# set file_list { net0 net1 net2 }
+# source ~/.tooluse
+## put "sourcing r"
+sourcing r
+## proc r { } {
+## put "restart"
+## close_sim -f
+## launch_sim
+## }
+## put "sourcing r_a"
+sourcing r_a
+## proc r_a { } {
+## put "restart"
+## close_sim -f
+## launch_sim
+## run 200 ns
+## }
+## put "sourcing sss"
+sourcing sss
+## proc sss { } {
+## 
+## launch_sim
+## run all
+## }
+# foreach x $file_list {
+#     puts " now is processing $x  synthesis..."
+# 
+#     set prj_name [format %s%s $x _prj]
+#     set hdl_file_location [format %s%s verilog_ $x]
+#     puts "project name is $prj_name "
+#     puts "HDL file location is $hdl_file_location"
+#     #file location
+#     
+#     set file_root_folder [format %s "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py"]
+# 
+#     create_project $prj_name -force [format %s%s%s $file_root_folder /vivado/ $prj_name] -part xczu7ev-ffvc1156-2-e
+# 
+#     set_property board_part xilinx.com:zcu104:part0:1.1 [current_project]
+#     #hdl file location
+# 
+#     #update_compile_order -fileset sources_1
+# 
+#     add_files -fileset sources_1 -norecurse -scan_for_includes [format %s%s%s $file_root_folder / $hdl_file_location]
+#     remove_files  [format %s%s%s%s $file_root_folder "/" $hdl_file_location "/tb.v"]
+#     update_compile_order -fileset sources_1
+#     
+# 
+#     update_compile_order -fileset sources_1
+#     update_compile_order -fileset sim_1
+# 
+#     set_property top top_cnn [current_fileset]
+#     update_compile_order -fileset sources_1
+#     launch_sim    
+#     launch_runs synth_1 -jobs 20
+#     wait_on_run synth_1
+#     puts "wating for synthesis......"
+#     open_run synth_1 -name synth_1
+#     set report_name [format %s%s $prj_name "_report.txt"]
+# 
+#     report_utilization -hierarchical -hierarchical_depth 5 \
+#     -file [format %s%s%s $file_root_folder "/report/" $report_name ] 
+#     puts "$prj_name finished..."
+# }
+ now is processing net0  synthesis...
+project name is net0_prj 
+HDL file location is verilog_net0
+CRITICAL WARNING: [filemgmt 20-742] The top module "top_cnn" specified for this project can not be validated. The current project is using automatic hierarchy update mode, and hence a new suitable replacement top will be automatically selected. If this is not desired, please change the hierarchy update mode to one of the manual compile order modes first, and then set top to any desired value.
+Resolution: To switch to manual update order go to the Sources view, right-click on any node in the hierarchy and in the context menu select: 'Hierarchy Update' option 'No Update' or run the following Tcl Command: set_property source_mgmt_mode None [current_project] (which is the Manual Compile Order mode).
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'top_tcb_121_32_10'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net0_prj/net0_prj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/kaunyu/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tcb_121_32_10' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net0_prj/net0_prj.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj top_tcb_121_32_10_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net0/comparator_30bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net0/layer0_tcb_121x32x10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module layer0_tcb_121x32x10
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net0/layer2_tcb_121x32x10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module layer2_tcb_121x32x10
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net0/top_tcb_121_32_10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tcb_121_32_10
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net0_prj/net0_prj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net0_prj/net0_prj.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tcb_121_32_10_behav xil_defaultlib.top_tcb_121_32_10 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/kaunyu/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tcb_121_32_10_behav xil_defaultlib.top_tcb_121_32_10 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'predict' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net0/top_tcb_121_32_10.v:14]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net0_prj/net0_prj.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net0_prj/net0_prj.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.layer0_tcb_121x32x10
+Compiling module xil_defaultlib.layer2_tcb_121x32x10
+Compiling module xil_defaultlib.comparator
+Compiling module xil_defaultlib.top_tcb_121_32_10
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tcb_121_32_10_behav
+execute_script: Time (s): cpu = 00:00:24 ; elapsed = 00:00:12 . Memory (MB): peak = 2689.934 ; gain = 0.000 ; free physical = 12087 ; free virtual = 149245
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net0_prj/net0_prj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "top_tcb_121_32_10_behav -key {Behavioral:sim_1:Functional:top_tcb_121_32_10} -tclbatch {top_tcb_121_32_10.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source top_tcb_121_32_10.tcl
+## set curr_wave [current_wave_config]
+## if { [string length $curr_wave] == 0 } {
+##   if { [llength [get_objects]] > 0} {
+##     add_wave /
+##     set_property needs_save false [current_wave_config]
+##   } else {
+##      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+##   }
+## }
+## run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_tcb_121_32_10_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:26 ; elapsed = 00:00:15 . Memory (MB): peak = 2751.180 ; gain = 61.246 ; free physical = 12091 ; free virtual = 149252
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Tue Feb 14 13:41:23 2023] Launched synth_1...
+Run output will be captured here: /home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net0_prj/net0_prj.runs/synth_1/runme.log
+[Tue Feb 14 13:41:23 2023] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log top_tcb_121_32_10.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_tcb_121_32_10.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top_tcb_121_32_10.tcl -notrace
+Command: synth_design -top top_tcb_121_32_10 -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 123296
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2688.934 ; gain = 0.000 ; free physical = 10204 ; free virtual = 147376
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_tcb_121_32_10' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net0/top_tcb_121_32_10.v:1]
+INFO: [Synth 8-6157] synthesizing module 'layer0_tcb_121x32x10' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net0/layer0_tcb_121x32x10.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'layer0_tcb_121x32x10' (0#1) [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net0/layer0_tcb_121x32x10.v:1]
+INFO: [Synth 8-6157] synthesizing module 'layer2_tcb_121x32x10' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net0/layer2_tcb_121x32x10.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'layer2_tcb_121x32x10' (0#1) [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net0/layer2_tcb_121x32x10.v:1]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net0/comparator_30bit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (0#1) [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net0/comparator_30bit.v:1]
+WARNING: [Synth 8-689] width (32) of port connection 'predict' does not match port width (8) of module 'comparator' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net0/top_tcb_121_32_10.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'top_tcb_121_32_10' (0#1) [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net0/top_tcb_121_32_10.v:1]
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[31] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[30] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[29] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[28] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[27] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[26] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[25] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[24] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[23] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[22] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[21] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[20] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[19] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[18] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[17] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[16] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[15] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[14] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[13] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[12] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[11] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[10] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[9] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[8] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2795.934 ; gain = 107.000 ; free physical = 10997 ; free virtual = 148178
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2795.934 ; gain = 107.000 ; free physical = 11026 ; free virtual = 148206
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:27 . Memory (MB): peak = 3518.512 ; gain = 829.578 ; free physical = 6013 ; free virtual = 143326
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	 153 Input   40 Bit       Adders := 3     
+	   2 Input   40 Bit       Adders := 13    
+	 128 Input   40 Bit       Adders := 1     
+	   3 Input   40 Bit       Adders := 10    
+	 149 Input   40 Bit       Adders := 2     
+	 136 Input   40 Bit       Adders := 1     
+	   5 Input   40 Bit       Adders := 2     
+	   4 Input   40 Bit       Adders := 5     
+	 157 Input   40 Bit       Adders := 1     
+	   8 Input   40 Bit       Adders := 1     
+	 142 Input   40 Bit       Adders := 2     
+	   4 Input   25 Bit       Adders := 539   
+	 328 Input   25 Bit       Adders := 1     
+	   3 Input   25 Bit       Adders := 168   
+	   2 Input   25 Bit       Adders := 281   
+	   7 Input   25 Bit       Adders := 173   
+	   5 Input   25 Bit       Adders := 463   
+	   6 Input   25 Bit       Adders := 327   
+	 272 Input   25 Bit       Adders := 1     
+	 339 Input   25 Bit       Adders := 2     
+	   8 Input   25 Bit       Adders := 40    
+	 177 Input   25 Bit       Adders := 1     
+	 203 Input   25 Bit       Adders := 1     
+	 294 Input   25 Bit       Adders := 1     
+	 309 Input   25 Bit       Adders := 1     
+	 343 Input   25 Bit       Adders := 1     
+	 325 Input   25 Bit       Adders := 2     
+	 220 Input   25 Bit       Adders := 1     
+	 215 Input   25 Bit       Adders := 1     
+	 219 Input   25 Bit       Adders := 1     
+	 321 Input   25 Bit       Adders := 2     
+	 334 Input   25 Bit       Adders := 1     
+	 308 Input   25 Bit       Adders := 1     
+	 310 Input   25 Bit       Adders := 1     
+	 317 Input   25 Bit       Adders := 1     
+	 287 Input   25 Bit       Adders := 1     
+	 318 Input   25 Bit       Adders := 2     
+	 306 Input   25 Bit       Adders := 2     
+	 302 Input   25 Bit       Adders := 1     
+	 292 Input   25 Bit       Adders := 1     
+	 347 Input   25 Bit       Adders := 1     
+	 338 Input   25 Bit       Adders := 1     
+	 365 Input   25 Bit       Adders := 1     
+	 314 Input   25 Bit       Adders := 1     
+	 331 Input   25 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 9     
++---Registers : 
+	               40 Bit    Registers := 42    
+	                8 Bit    Registers := 122   
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   44 Bit        Muxes := 27    
+	   2 Input   25 Bit        Muxes := 32    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[31] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[30] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[29] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[28] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[27] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[26] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[25] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[24] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[23] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[22] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[21] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[20] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[19] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[18] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[17] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[16] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[15] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[14] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[13] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[12] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[11] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[10] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[9] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_32_10 has port number[8] driven by constant 0
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\layer_in_buffer_reg[8][27] )
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[9][39]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[4][36]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[4][37]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[4][38]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[4][39]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][36]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][37]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][38]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][39]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][39]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][34]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][35]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][36]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][37]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][38]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][39]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][39]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][33]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[21][39]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[9][38]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][38]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][38]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[4][35]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][35]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][32]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[21][38]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[9][37]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][37]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][37]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[4][34]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][34]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][31]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[21][37]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][30]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][29]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][25]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][26]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][27]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][28]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[21][36]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[21][35]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[21][25]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[21][26]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[21][27]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[21][28]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[21][29]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[21][30]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[21][31]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[21][32]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[21][33]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[21][34]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[9][36]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][36]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][36]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][35]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][35]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][34]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][25]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][26]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][27]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][28]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][29]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][30]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][31]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][32]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][33]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[4][33]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][33]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][34]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[9][35]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[4][32]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][32]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[4][31]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[4][25]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[4][26]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[4][27]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[4][29]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[4][28]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[4][30]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][31]' (FDR) to 'layer_in_buffer_reg[5][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][25]' (FDR) to 'layer_in_buffer_reg[5][26]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][26]' (FDR) to 'layer_in_buffer_reg[5][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][27]' (FDR) to 'layer_in_buffer_reg[5][28]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][28]' (FDR) to 'layer_in_buffer_reg[5][29]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][29]' (FDR) to 'layer_in_buffer_reg[5][30]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][30]' (FDR) to 'layer_in_buffer_reg[9][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][33]' (FDR) to 'layer_in_buffer_reg[9][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][32]' (FDR) to 'layer_in_buffer_reg[9][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][27]' (FDR) to 'layer_in_buffer_reg[9][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][28]' (FDR) to 'layer_in_buffer_reg[9][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][29]' (FDR) to 'layer_in_buffer_reg[9][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][25]' (FDR) to 'layer_in_buffer_reg[9][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][30]' (FDR) to 'layer_in_buffer_reg[9][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][26]' (FDR) to 'layer_in_buffer_reg[9][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][31]' (FDR) to 'layer_in_buffer_reg[9][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[9][34]' (FDR) to 'layer_in_buffer_reg[9][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[9][33]' (FDR) to 'layer_in_buffer_reg[9][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[9][25]' (FDR) to 'layer_in_buffer_reg[9][26]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[9][26]' (FDR) to 'layer_in_buffer_reg[9][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[9][27]' (FDR) to 'layer_in_buffer_reg[9][28]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\layer_in_buffer_reg[1][39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\layer_in_buffer_reg[17][39] )
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\layer_in_buffer_reg[16][38] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:19 ; elapsed = 00:02:26 . Memory (MB): peak = 3636.512 ; gain = 947.578 ; free physical = 2634 ; free virtual = 140109
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:40 ; elapsed = 00:02:47 . Memory (MB): peak = 3687.918 ; gain = 998.984 ; free physical = 2391 ; free virtual = 140047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:04:01 ; elapsed = 00:04:09 . Memory (MB): peak = 3749.258 ; gain = 1060.324 ; free physical = 1922 ; free virtual = 139613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:04:38 ; elapsed = 00:04:46 . Memory (MB): peak = 3922.859 ; gain = 1233.926 ; free physical = 1650 ; free virtual = 139543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:39 ; elapsed = 00:04:47 . Memory (MB): peak = 3922.859 ; gain = 1233.926 ; free physical = 1638 ; free virtual = 139531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:14 ; elapsed = 00:05:23 . Memory (MB): peak = 3922.859 ; gain = 1233.926 ; free physical = 1509 ; free virtual = 139407
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:18 ; elapsed = 00:05:27 . Memory (MB): peak = 3922.859 ; gain = 1233.926 ; free physical = 1510 ; free virtual = 139408
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:22 ; elapsed = 00:05:31 . Memory (MB): peak = 3922.859 ; gain = 1233.926 ; free physical = 1508 ; free virtual = 139406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:26 ; elapsed = 00:05:34 . Memory (MB): peak = 3922.859 ; gain = 1233.926 ; free physical = 1508 ; free virtual = 139406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY8 | 24860|
+|3     |LUT1   | 37819|
+|4     |LUT2   | 47362|
+|5     |LUT3   | 81444|
+|6     |LUT4   | 83748|
+|7     |LUT5   | 19526|
+|8     |LUT6   | 17132|
+|9     |FDRE   |  4027|
+|10    |IBUF   |   971|
+|11    |OBUF   |    33|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------+---------------------+-------+
+|      |Instance         |Module               |Cells  |
++------+-----------------+---------------------+-------+
+|1     |top              |                     | 316923|
+|2     |  DUT_comparator |comparator           |   2848|
+|3     |  DUT_layer0     |layer0_tcb_121x32x10 | 162994|
+|4     |  DUT_layer2     |layer2_tcb_121x32x10 |  38475|
++------+-----------------+---------------------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:26 ; elapsed = 00:05:35 . Memory (MB): peak = 3922.859 ; gain = 1233.926 ; free physical = 1508 ; free virtual = 139406
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 49 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:30 ; elapsed = 00:05:36 . Memory (MB): peak = 3926.770 ; gain = 1237.836 ; free physical = 8901 ; free virtual = 146799
+Synthesis Optimization Complete : Time (s): cpu = 00:05:30 ; elapsed = 00:05:36 . Memory (MB): peak = 3926.770 ; gain = 1237.836 ; free physical = 8944 ; free virtual = 146801
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4216.734 ; gain = 0.000 ; free physical = 8536 ; free virtual = 146393
+INFO: [Netlist 29-17] Analyzing 25832 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4430.523 ; gain = 0.000 ; free physical = 8435 ; free virtual = 146296
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 972 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 971 instances
+
+Synth Design complete, checksum: 64a2b509
+INFO: [Common 17-83] Releasing license: Synthesis
+128 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:06:53 ; elapsed = 00:06:51 . Memory (MB): peak = 4430.523 ; gain = 1741.590 ; free physical = 8974 ; free virtual = 146834
+INFO: [Common 17-1381] The checkpoint '/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net0_prj/net0_prj.runs/synth_1/top_tcb_121_32_10.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:40 ; elapsed = 00:00:26 . Memory (MB): peak = 4502.559 ; gain = 72.035 ; free physical = 8864 ; free virtual = 146842
+INFO: [runtcl-4] Executing : report_utilization -file top_tcb_121_32_10_utilization_synth.rpt -pb top_tcb_121_32_10_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 14 13:48:50 2023...
+[Tue Feb 14 13:49:01 2023] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:07:44 ; elapsed = 00:07:38 . Memory (MB): peak = 2751.180 ; gain = 0.000 ; free physical = 11844 ; free virtual = 149266
+wating for synthesis......
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xczu7ev-ffvc1156-2-e
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3134.523 ; gain = 9.000 ; free physical = 10521 ; free virtual = 147943
+INFO: [Netlist 29-17] Analyzing 25831 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3489.184 ; gain = 0.000 ; free physical = 10283 ; free virtual = 147705
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 971 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 971 instances
+
+open_run: Time (s): cpu = 00:00:47 ; elapsed = 00:00:41 . Memory (MB): peak = 3489.184 ; gain = 738.004 ; free physical = 10283 ; free virtual = 147705
+net0_prj finished...
+ now is processing net1  synthesis...
+project name is net1_prj 
+HDL file location is verilog_net1
+CRITICAL WARNING: [filemgmt 20-742] The top module "top_cnn" specified for this project can not be validated. The current project is using automatic hierarchy update mode, and hence a new suitable replacement top will be automatically selected. If this is not desired, please change the hierarchy update mode to one of the manual compile order modes first, and then set top to any desired value.
+Resolution: To switch to manual update order go to the Sources view, right-click on any node in the hierarchy and in the context menu select: 'Hierarchy Update' option 'No Update' or run the following Tcl Command: set_property source_mgmt_mode None [current_project] (which is the Manual Compile Order mode).
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'top_tcb_121_64_10'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net1_prj/net1_prj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/kaunyu/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tcb_121_64_10' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net1_prj/net1_prj.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj top_tcb_121_64_10_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net1/comparator_30bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net1/layer0_tcb_121x64x10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module layer0_tcb_121x64x10
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net1/layer2_tcb_121x64x10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module layer2_tcb_121x64x10
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net1/top_tcb_121_64_10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tcb_121_64_10
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net1_prj/net1_prj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net1_prj/net1_prj.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tcb_121_64_10_behav xil_defaultlib.top_tcb_121_64_10 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/kaunyu/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tcb_121_64_10_behav xil_defaultlib.top_tcb_121_64_10 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'predict' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net1/top_tcb_121_64_10.v:14]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net1_prj/net1_prj.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net1_prj/net1_prj.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.layer0_tcb_121x64x10
+Compiling module xil_defaultlib.layer2_tcb_121x64x10
+Compiling module xil_defaultlib.comparator
+Compiling module xil_defaultlib.top_tcb_121_64_10
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tcb_121_64_10_behav
+execute_script: Time (s): cpu = 00:00:52 ; elapsed = 00:00:21 . Memory (MB): peak = 3489.188 ; gain = 0.000 ; free physical = 10212 ; free virtual = 147684
+INFO: [USF-XSim-69] 'elaborate' step finished in '21' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net1_prj/net1_prj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "top_tcb_121_64_10_behav -key {Behavioral:sim_1:Functional:top_tcb_121_64_10} -tclbatch {top_tcb_121_64_10.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source top_tcb_121_64_10.tcl
+## set curr_wave [current_wave_config]
+## if { [string length $curr_wave] == 0 } {
+##   if { [llength [get_objects]] > 0} {
+##     add_wave /
+##     set_property needs_save false [current_wave_config]
+##   } else {
+##      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+##   }
+## }
+## run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_tcb_121_64_10_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:53 ; elapsed = 00:00:24 . Memory (MB): peak = 3545.023 ; gain = 55.836 ; free physical = 10091 ; free virtual = 147574
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Tue Feb 14 13:50:12 2023] Launched synth_1...
+Run output will be captured here: /home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net1_prj/net1_prj.runs/synth_1/runme.log
+[Tue Feb 14 13:50:12 2023] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log top_tcb_121_64_10.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_tcb_121_64_10.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top_tcb_121_64_10.tcl -notrace
+Command: synth_design -top top_tcb_121_64_10 -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 126078
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2688.906 ; gain = 0.000 ; free physical = 8205 ; free virtual = 145749
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_tcb_121_64_10' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net1/top_tcb_121_64_10.v:1]
+INFO: [Synth 8-6157] synthesizing module 'layer0_tcb_121x64x10' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net1/layer0_tcb_121x64x10.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'layer0_tcb_121x64x10' (0#1) [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net1/layer0_tcb_121x64x10.v:1]
+INFO: [Synth 8-6157] synthesizing module 'layer2_tcb_121x64x10' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net1/layer2_tcb_121x64x10.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'layer2_tcb_121x64x10' (0#1) [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net1/layer2_tcb_121x64x10.v:1]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net1/comparator_30bit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (0#1) [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net1/comparator_30bit.v:1]
+WARNING: [Synth 8-689] width (32) of port connection 'predict' does not match port width (8) of module 'comparator' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net1/top_tcb_121_64_10.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'top_tcb_121_64_10' (0#1) [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net1/top_tcb_121_64_10.v:1]
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[31] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[30] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[29] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[28] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[27] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[26] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[25] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[24] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[23] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[22] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[21] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[20] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[19] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[18] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[17] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[16] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[15] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[14] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[13] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[12] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[11] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[10] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[9] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[8] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3073.906 ; gain = 385.000 ; free physical = 8819 ; free virtual = 146369
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3073.906 ; gain = 385.000 ; free physical = 8880 ; free virtual = 146430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:46 ; elapsed = 00:00:45 . Memory (MB): peak = 4020.715 ; gain = 1331.809 ; free physical = 823 ; free virtual = 138389
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	 301 Input   42 Bit       Adders := 1     
+	   2 Input   42 Bit       Adders := 34    
+	   3 Input   42 Bit       Adders := 26    
+	   4 Input   42 Bit       Adders := 7     
+	   6 Input   42 Bit       Adders := 2     
+	 288 Input   42 Bit       Adders := 1     
+	 275 Input   42 Bit       Adders := 1     
+	 280 Input   42 Bit       Adders := 1     
+	 295 Input   42 Bit       Adders := 2     
+	 277 Input   42 Bit       Adders := 1     
+	   5 Input   42 Bit       Adders := 2     
+	 276 Input   42 Bit       Adders := 1     
+	 286 Input   42 Bit       Adders := 1     
+	 289 Input   42 Bit       Adders := 1     
+	 274 Input   25 Bit       Adders := 2     
+	   6 Input   25 Bit       Adders := 579   
+	   5 Input   25 Bit       Adders := 954   
+	   2 Input   25 Bit       Adders := 541   
+	   7 Input   25 Bit       Adders := 302   
+	   4 Input   25 Bit       Adders := 873   
+	   3 Input   25 Bit       Adders := 391   
+	   8 Input   25 Bit       Adders := 61    
+	 294 Input   25 Bit       Adders := 3     
+	 277 Input   25 Bit       Adders := 1     
+	 261 Input   25 Bit       Adders := 2     
+	 257 Input   25 Bit       Adders := 1     
+	 292 Input   25 Bit       Adders := 1     
+	 262 Input   25 Bit       Adders := 2     
+	 249 Input   25 Bit       Adders := 1     
+	 182 Input   25 Bit       Adders := 1     
+	 303 Input   25 Bit       Adders := 2     
+	 273 Input   25 Bit       Adders := 2     
+	 193 Input   25 Bit       Adders := 1     
+	 170 Input   25 Bit       Adders := 1     
+	 302 Input   25 Bit       Adders := 2     
+	 304 Input   25 Bit       Adders := 1     
+	 296 Input   25 Bit       Adders := 2     
+	 301 Input   25 Bit       Adders := 3     
+	 282 Input   25 Bit       Adders := 2     
+	 307 Input   25 Bit       Adders := 2     
+	 299 Input   25 Bit       Adders := 1     
+	 269 Input   25 Bit       Adders := 2     
+	 256 Input   25 Bit       Adders := 1     
+	 295 Input   25 Bit       Adders := 2     
+	 288 Input   25 Bit       Adders := 2     
+	 306 Input   25 Bit       Adders := 2     
+	 279 Input   25 Bit       Adders := 3     
+	 297 Input   25 Bit       Adders := 2     
+	 289 Input   25 Bit       Adders := 1     
+	 305 Input   25 Bit       Adders := 1     
+	 309 Input   25 Bit       Adders := 1     
+	 272 Input   25 Bit       Adders := 3     
+	 339 Input   25 Bit       Adders := 1     
+	 335 Input   25 Bit       Adders := 1     
+	 250 Input   25 Bit       Adders := 1     
+	 286 Input   25 Bit       Adders := 1     
+	 313 Input   25 Bit       Adders := 1     
+	 322 Input   25 Bit       Adders := 1     
+	 321 Input   25 Bit       Adders := 1     
+	 290 Input   25 Bit       Adders := 1     
+	 276 Input   25 Bit       Adders := 1     
+	 284 Input   25 Bit       Adders := 1     
+	 285 Input   25 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 9     
++---Registers : 
+	               42 Bit    Registers := 74    
+	                8 Bit    Registers := 122   
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   46 Bit        Muxes := 27    
+	   2 Input   25 Bit        Muxes := 64    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[31] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[30] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[29] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[28] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[27] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[26] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[25] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[24] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[23] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[22] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[21] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[20] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[19] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[18] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[17] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[16] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[15] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[14] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[13] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[12] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[11] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[10] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[9] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_64_10 has port number[8] driven by constant 0
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][25]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][26]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][27]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][28]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][29]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][30]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][31]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][32]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][33]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][34]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][35]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][36]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][37]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][38]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][39]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][40]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[42][41]' (FDR) to 'layer_in_buffer_reg[39][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][25]' (FDR) to 'layer_in_buffer_reg[39][26]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][26]' (FDR) to 'layer_in_buffer_reg[39][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][27]' (FDR) to 'layer_in_buffer_reg[39][28]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][28]' (FDR) to 'layer_in_buffer_reg[39][29]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][29]' (FDR) to 'layer_in_buffer_reg[39][30]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][30]' (FDR) to 'layer_in_buffer_reg[39][31]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][31]' (FDR) to 'layer_in_buffer_reg[39][32]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][32]' (FDR) to 'layer_in_buffer_reg[39][33]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][33]' (FDR) to 'layer_in_buffer_reg[39][34]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][34]' (FDR) to 'layer_in_buffer_reg[39][35]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][35]' (FDR) to 'layer_in_buffer_reg[39][36]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][36]' (FDR) to 'layer_in_buffer_reg[39][37]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][37]' (FDR) to 'layer_in_buffer_reg[39][38]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][38]' (FDR) to 'layer_in_buffer_reg[39][39]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][39]' (FDR) to 'layer_in_buffer_reg[39][40]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][40]' (FDR) to 'layer_in_buffer_reg[39][41]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[39][41]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][25]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][26]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][27]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][28]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][29]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][30]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][31]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][32]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][33]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][34]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][35]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][36]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][37]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][38]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][39]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][40]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[33][41]' (FDR) to 'layer_in_buffer_reg[28][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][25]' (FDR) to 'layer_in_buffer_reg[28][26]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][26]' (FDR) to 'layer_in_buffer_reg[28][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][27]' (FDR) to 'layer_in_buffer_reg[28][28]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][28]' (FDR) to 'layer_in_buffer_reg[28][29]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][29]' (FDR) to 'layer_in_buffer_reg[28][30]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][30]' (FDR) to 'layer_in_buffer_reg[28][31]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][31]' (FDR) to 'layer_in_buffer_reg[28][32]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][32]' (FDR) to 'layer_in_buffer_reg[28][33]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][33]' (FDR) to 'layer_in_buffer_reg[28][34]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][34]' (FDR) to 'layer_in_buffer_reg[28][35]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][35]' (FDR) to 'layer_in_buffer_reg[28][36]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][36]' (FDR) to 'layer_in_buffer_reg[28][37]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][37]' (FDR) to 'layer_in_buffer_reg[28][38]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][38]' (FDR) to 'layer_in_buffer_reg[28][39]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][39]' (FDR) to 'layer_in_buffer_reg[28][40]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][40]' (FDR) to 'layer_in_buffer_reg[28][41]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[28][41]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][25]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][26]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][27]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][28]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][29]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][30]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][31]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][32]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][33]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][34]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][35]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][36]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][37]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][38]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][39]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][40]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[26][41]' (FDR) to 'layer_in_buffer_reg[22][25]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[22][25]' (FDR) to 'layer_in_buffer_reg[22][26]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[22][26]' (FDR) to 'layer_in_buffer_reg[22][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[22][27]' (FDR) to 'layer_in_buffer_reg[22][28]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[22][28]' (FDR) to 'layer_in_buffer_reg[22][29]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[22][29]' (FDR) to 'layer_in_buffer_reg[22][30]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[22][30]' (FDR) to 'layer_in_buffer_reg[22][31]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[22][31]' (FDR) to 'layer_in_buffer_reg[22][32]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[22][32]' (FDR) to 'layer_in_buffer_reg[22][33]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[22][33]' (FDR) to 'layer_in_buffer_reg[22][34]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[22][34]' (FDR) to 'layer_in_buffer_reg[22][35]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[22][35]' (FDR) to 'layer_in_buffer_reg[22][36]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[22][36]' (FDR) to 'layer_in_buffer_reg[22][37]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[22][37]' (FDR) to 'layer_in_buffer_reg[22][38]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[22][38]' (FDR) to 'layer_in_buffer_reg[22][39]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[22][39]' (FDR) to 'layer_in_buffer_reg[22][40]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\layer_in_buffer_reg[4][41] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:59 ; elapsed = 00:04:11 . Memory (MB): peak = 4348.125 ; gain = 1659.219 ; free physical = 326 ; free virtual = 137808
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:04:43 ; elapsed = 00:04:57 . Memory (MB): peak = 4474.773 ; gain = 1785.867 ; free physical = 267 ; free virtual = 137578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:08:14 ; elapsed = 00:08:30 . Memory (MB): peak = 4591.207 ; gain = 1902.301 ; free physical = 658 ; free virtual = 136772
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:09:28 ; elapsed = 00:09:45 . Memory (MB): peak = 4946.355 ; gain = 2257.449 ; free physical = 655 ; free virtual = 136656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:09:31 ; elapsed = 00:09:47 . Memory (MB): peak = 4946.355 ; gain = 2257.449 ; free physical = 641 ; free virtual = 136643
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:11:08 ; elapsed = 00:11:25 . Memory (MB): peak = 4946.355 ; gain = 2257.449 ; free physical = 398 ; free virtual = 136400
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:11:20 ; elapsed = 00:11:37 . Memory (MB): peak = 4946.355 ; gain = 2257.449 ; free physical = 382 ; free virtual = 136384
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:11:33 ; elapsed = 00:11:50 . Memory (MB): peak = 4946.355 ; gain = 2257.449 ; free physical = 395 ; free virtual = 136397
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:11:43 ; elapsed = 00:12:00 . Memory (MB): peak = 4946.355 ; gain = 2257.449 ; free physical = 385 ; free virtual = 136387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+-------+
+|      |Cell   |Count  |
++------+-------+-------+
+|1     |BUFG   |      1|
+|2     |CARRY8 |  47931|
+|3     |LUT1   |  71584|
+|4     |LUT2   |  86468|
+|5     |LUT3   | 158892|
+|6     |LUT4   | 163946|
+|7     |LUT5   |  35375|
+|8     |LUT6   |  34090|
+|9     |FDRE   |   6821|
+|10    |IBUF   |    971|
+|11    |OBUF   |     33|
++------+-------+-------+
+
+Report Instance Areas: 
++------+-----------------+---------------------+-------+
+|      |Instance         |Module               |Cells  |
++------+-----------------+---------------------+-------+
+|1     |top              |                     | 606112|
+|2     |  DUT_comparator |comparator           |   4153|
+|3     |  DUT_layer0     |layer0_tcb_121x64x10 | 303949|
+|4     |  DUT_layer2     |layer2_tcb_121x64x10 |  73040|
++------+-----------------+---------------------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:11:44 ; elapsed = 00:12:01 . Memory (MB): peak = 4946.355 ; gain = 2257.449 ; free physical = 385 ; free virtual = 136387
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 49 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:11:48 ; elapsed = 00:12:02 . Memory (MB): peak = 4950.266 ; gain = 2261.359 ; free physical = 8332 ; free virtual = 144358
+Synthesis Optimization Complete : Time (s): cpu = 00:11:48 ; elapsed = 00:12:02 . Memory (MB): peak = 4950.266 ; gain = 2261.359 ; free physical = 8442 ; free virtual = 144357
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 5474.949 ; gain = 0.000 ; free physical = 7672 ; free virtual = 143588
+INFO: [Netlist 29-17] Analyzing 48903 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.1 . Memory (MB): peak = 5771.402 ; gain = 0.000 ; free physical = 7407 ; free virtual = 143324
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 972 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 971 instances
+
+Synth Design complete, checksum: 3a030569
+INFO: [Common 17-83] Releasing license: Synthesis
+124 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:15:09 ; elapsed = 00:15:10 . Memory (MB): peak = 5771.402 ; gain = 3082.496 ; free physical = 8437 ; free virtual = 144356
+INFO: [Common 17-1381] The checkpoint '/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net1_prj/net1_prj.runs/synth_1/top_tcb_121_64_10.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:01:19 ; elapsed = 00:00:53 . Memory (MB): peak = 5843.438 ; gain = 72.035 ; free physical = 7455 ; free virtual = 144371
+INFO: [runtcl-4] Executing : report_utilization -file top_tcb_121_64_10_utilization_synth.rpt -pb top_tcb_121_64_10_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 14 14:06:25 2023...
+[Tue Feb 14 14:06:35 2023] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:16:43 ; elapsed = 00:16:24 . Memory (MB): peak = 3545.023 ; gain = 0.000 ; free physical = 11878 ; free virtual = 147598
+wating for synthesis......
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xczu7ev-ffvc1156-2-e
+Netlist sorting complete. Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 4246.977 ; gain = 13.297 ; free physical = 11161 ; free virtual = 146881
+INFO: [Netlist 29-17] Analyzing 48902 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4695.703 ; gain = 0.000 ; free physical = 10802 ; free virtual = 146522
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 971 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 971 instances
+
+open_run: Time (s): cpu = 00:01:27 ; elapsed = 00:01:14 . Memory (MB): peak = 4695.703 ; gain = 1150.680 ; free physical = 10802 ; free virtual = 146522
+net1_prj finished...
+ now is processing net2  synthesis...
+project name is net2_prj 
+HDL file location is verilog_net2
+CRITICAL WARNING: [filemgmt 20-742] The top module "top_cnn" specified for this project can not be validated. The current project is using automatic hierarchy update mode, and hence a new suitable replacement top will be automatically selected. If this is not desired, please change the hierarchy update mode to one of the manual compile order modes first, and then set top to any desired value.
+Resolution: To switch to manual update order go to the Sources view, right-click on any node in the hierarchy and in the context menu select: 'Hierarchy Update' option 'No Update' or run the following Tcl Command: set_property source_mgmt_mode None [current_project] (which is the Manual Compile Order mode).
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'top_tcb_121_16_10'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net2_prj/net2_prj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/kaunyu/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tcb_121_16_10' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net2_prj/net2_prj.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj top_tcb_121_16_10_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net2/comparator_30bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net2/layer0_tcb_121x16x10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module layer0_tcb_121x16x10
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net2/layer2_tcb_121x16x10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module layer2_tcb_121x16x10
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net2/top_tcb_121_16_10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tcb_121_16_10
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net2_prj/net2_prj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net2_prj/net2_prj.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tcb_121_16_10_behav xil_defaultlib.top_tcb_121_16_10 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/kaunyu/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tcb_121_16_10_behav xil_defaultlib.top_tcb_121_16_10 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'predict' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net2/top_tcb_121_16_10.v:14]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net2_prj/net2_prj.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net2_prj/net2_prj.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.layer0_tcb_121x16x10
+Compiling module xil_defaultlib.layer2_tcb_121x16x10
+Compiling module xil_defaultlib.comparator
+Compiling module xil_defaultlib.top_tcb_121_16_10
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tcb_121_16_10_behav
+execute_script: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 4695.707 ; gain = 0.000 ; free physical = 10793 ; free virtual = 146548
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net2_prj/net2_prj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "top_tcb_121_16_10_behav -key {Behavioral:sim_1:Functional:top_tcb_121_16_10} -tclbatch {top_tcb_121_16_10.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source top_tcb_121_16_10.tcl
+## set curr_wave [current_wave_config]
+## if { [string length $curr_wave] == 0 } {
+##   if { [llength [get_objects]] > 0} {
+##     add_wave /
+##     set_property needs_save false [current_wave_config]
+##   } else {
+##      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+##   }
+## }
+## run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_tcb_121_16_10_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 4751.543 ; gain = 55.836 ; free physical = 10790 ; free virtual = 146545
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Tue Feb 14 14:08:07 2023] Launched synth_1...
+Run output will be captured here: /home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net2_prj/net2_prj.runs/synth_1/runme.log
+[Tue Feb 14 14:08:07 2023] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log top_tcb_121_16_10.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_tcb_121_16_10.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top_tcb_121_16_10.tcl -notrace
+Command: synth_design -top top_tcb_121_16_10 -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 130526
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2688.930 ; gain = 0.000 ; free physical = 8550 ; free virtual = 144683
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_tcb_121_16_10' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net2/top_tcb_121_16_10.v:1]
+INFO: [Synth 8-6157] synthesizing module 'layer0_tcb_121x16x10' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net2/layer0_tcb_121x16x10.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'layer0_tcb_121x16x10' (0#1) [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net2/layer0_tcb_121x16x10.v:1]
+INFO: [Synth 8-6157] synthesizing module 'layer2_tcb_121x16x10' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net2/layer2_tcb_121x16x10.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'layer2_tcb_121x16x10' (0#1) [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net2/layer2_tcb_121x16x10.v:1]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net2/comparator_30bit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (0#1) [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net2/comparator_30bit.v:1]
+WARNING: [Synth 8-689] width (32) of port connection 'predict' does not match port width (8) of module 'comparator' [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net2/top_tcb_121_16_10.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'top_tcb_121_16_10' (0#1) [/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/verilog_net2/top_tcb_121_16_10.v:1]
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[31] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[30] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[29] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[28] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[27] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[26] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[25] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[24] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[23] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[22] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[21] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[20] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[19] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[18] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[17] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[16] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[15] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[14] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[13] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[12] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[11] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[10] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[9] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[8] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2688.930 ; gain = 0.000 ; free physical = 9454 ; free virtual = 145591
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2688.930 ; gain = 0.000 ; free physical = 9480 ; free virtual = 145618
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   42 Bit       Adders := 14    
+	  80 Input   42 Bit       Adders := 1     
+	  77 Input   42 Bit       Adders := 1     
+	  73 Input   42 Bit       Adders := 1     
+	  82 Input   42 Bit       Adders := 1     
+	  83 Input   42 Bit       Adders := 1     
+	  79 Input   42 Bit       Adders := 1     
+	   4 Input   42 Bit       Adders := 2     
+	   6 Input   42 Bit       Adders := 1     
+	  81 Input   42 Bit       Adders := 1     
+	  67 Input   42 Bit       Adders := 1     
+	   3 Input   42 Bit       Adders := 2     
+	  74 Input   42 Bit       Adders := 1     
+	   5 Input   42 Bit       Adders := 1     
+	  68 Input   42 Bit       Adders := 1     
+	 296 Input   27 Bit       Adders := 1     
+	   6 Input   27 Bit       Adders := 193   
+	   4 Input   27 Bit       Adders := 295   
+	   3 Input   27 Bit       Adders := 58    
+	   5 Input   27 Bit       Adders := 230   
+	   2 Input   27 Bit       Adders := 112   
+	   7 Input   27 Bit       Adders := 87    
+	   8 Input   27 Bit       Adders := 29    
+	 376 Input   27 Bit       Adders := 1     
+	 218 Input   27 Bit       Adders := 1     
+	 335 Input   27 Bit       Adders := 2     
+	 312 Input   27 Bit       Adders := 1     
+	 315 Input   27 Bit       Adders := 1     
+	 352 Input   27 Bit       Adders := 1     
+	 215 Input   27 Bit       Adders := 1     
+	 330 Input   27 Bit       Adders := 1     
+	 237 Input   27 Bit       Adders := 1     
+	 326 Input   27 Bit       Adders := 1     
+	 314 Input   27 Bit       Adders := 1     
+	 356 Input   27 Bit       Adders := 1     
+	 401 Input   27 Bit       Adders := 1     
+	 343 Input   27 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 9     
++---Registers : 
+	               42 Bit    Registers := 26    
+	                8 Bit    Registers := 122   
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   46 Bit        Muxes := 27    
+	   2 Input   27 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[31] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[30] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[29] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[28] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[27] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[26] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[25] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[24] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[23] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[22] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[21] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[20] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[19] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[18] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[17] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[16] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[15] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[14] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[13] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[12] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[11] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[10] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[9] driven by constant 0
+WARNING: [Synth 8-3917] design top_tcb_121_16_10 has port number[8] driven by constant 0
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][27]' (FDR) to 'layer_in_buffer_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][28]' (FDR) to 'layer_in_buffer_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][29]' (FDR) to 'layer_in_buffer_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][30]' (FDR) to 'layer_in_buffer_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][31]' (FDR) to 'layer_in_buffer_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][32]' (FDR) to 'layer_in_buffer_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][33]' (FDR) to 'layer_in_buffer_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][34]' (FDR) to 'layer_in_buffer_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][35]' (FDR) to 'layer_in_buffer_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][36]' (FDR) to 'layer_in_buffer_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][37]' (FDR) to 'layer_in_buffer_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][38]' (FDR) to 'layer_in_buffer_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][39]' (FDR) to 'layer_in_buffer_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][40]' (FDR) to 'layer_in_buffer_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[6][41]' (FDR) to 'layer_in_buffer_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[3][27]' (FDR) to 'layer_in_buffer_reg[3][28]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[3][28]' (FDR) to 'layer_in_buffer_reg[3][29]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[3][29]' (FDR) to 'layer_in_buffer_reg[3][30]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[3][30]' (FDR) to 'layer_in_buffer_reg[3][31]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[3][31]' (FDR) to 'layer_in_buffer_reg[3][32]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[3][32]' (FDR) to 'layer_in_buffer_reg[3][33]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[3][33]' (FDR) to 'layer_in_buffer_reg[3][34]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[3][34]' (FDR) to 'layer_in_buffer_reg[3][35]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[3][35]' (FDR) to 'layer_in_buffer_reg[3][36]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[3][36]' (FDR) to 'layer_in_buffer_reg[3][37]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[3][37]' (FDR) to 'layer_in_buffer_reg[3][38]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[3][38]' (FDR) to 'layer_in_buffer_reg[3][39]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[3][39]' (FDR) to 'layer_in_buffer_reg[3][40]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[3][40]' (FDR) to 'layer_in_buffer_reg[3][41]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\layer_in_buffer_reg[3][41] )
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][39]' (FDR) to 'layer_in_buffer_reg[5][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][40]' (FDR) to 'layer_in_buffer_reg[5][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][41]' (FDR) to 'layer_in_buffer_reg[5][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][38]' (FDR) to 'layer_in_buffer_reg[5][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][37]' (FDR) to 'layer_in_buffer_reg[5][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][36]' (FDR) to 'layer_in_buffer_reg[5][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][35]' (FDR) to 'layer_in_buffer_reg[5][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][34]' (FDR) to 'layer_in_buffer_reg[5][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][33]' (FDR) to 'layer_in_buffer_reg[5][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][27]' (FDR) to 'layer_in_buffer_reg[5][28]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][28]' (FDR) to 'layer_in_buffer_reg[5][29]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][29]' (FDR) to 'layer_in_buffer_reg[5][30]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][30]' (FDR) to 'layer_in_buffer_reg[5][31]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][31]' (FDR) to 'layer_in_buffer_reg[5][32]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[5][32]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][27]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][28]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][29]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][30]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][31]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][32]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][33]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][34]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][35]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][36]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][37]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][38]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][39]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][40]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[2][41]' (FDR) to 'layer_in_buffer_reg[13][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[13][27]' (FDR) to 'layer_in_buffer_reg[13][28]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[13][28]' (FDR) to 'layer_in_buffer_reg[13][29]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[13][29]' (FDR) to 'layer_in_buffer_reg[13][30]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[13][30]' (FDR) to 'layer_in_buffer_reg[13][31]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[13][31]' (FDR) to 'layer_in_buffer_reg[13][32]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[13][32]' (FDR) to 'layer_in_buffer_reg[13][33]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[13][33]' (FDR) to 'layer_in_buffer_reg[13][34]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[13][34]' (FDR) to 'layer_in_buffer_reg[13][35]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[13][35]' (FDR) to 'layer_in_buffer_reg[13][36]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[13][36]' (FDR) to 'layer_in_buffer_reg[13][37]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[13][37]' (FDR) to 'layer_in_buffer_reg[13][38]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[13][38]' (FDR) to 'layer_in_buffer_reg[13][39]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[13][39]' (FDR) to 'layer_in_buffer_reg[13][40]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[13][40]' (FDR) to 'layer_in_buffer_reg[13][41]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[13][41]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[12][27]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[12][28]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[12][29]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[12][30]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[12][31]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[12][32]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[12][33]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[12][34]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[12][35]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[12][36]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[12][37]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[12][38]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[12][39]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[12][40]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[12][41]' (FDR) to 'layer_in_buffer_reg[11][27]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[11][27]' (FDR) to 'layer_in_buffer_reg[11][28]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[11][28]' (FDR) to 'layer_in_buffer_reg[11][29]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[11][29]' (FDR) to 'layer_in_buffer_reg[11][30]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[11][30]' (FDR) to 'layer_in_buffer_reg[11][31]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[11][31]' (FDR) to 'layer_in_buffer_reg[11][32]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[11][32]' (FDR) to 'layer_in_buffer_reg[11][33]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[11][33]' (FDR) to 'layer_in_buffer_reg[11][34]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[11][34]' (FDR) to 'layer_in_buffer_reg[11][35]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[11][35]' (FDR) to 'layer_in_buffer_reg[11][36]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[11][36]' (FDR) to 'layer_in_buffer_reg[11][37]'
+INFO: [Synth 8-3886] merging instance 'layer_in_buffer_reg[11][37]' (FDR) to 'layer_in_buffer_reg[11][38]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\layer_in_buffer_reg[7][41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\layer_in_buffer_reg[4][34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\layer_in_buffer_reg[15][41] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:25 ; elapsed = 00:01:33 . Memory (MB): peak = 3376.414 ; gain = 687.484 ; free physical = 1494 ; free virtual = 137729
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:35 ; elapsed = 00:01:44 . Memory (MB): peak = 3376.414 ; gain = 687.484 ; free physical = 1358 ; free virtual = 137695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:14 ; elapsed = 00:02:23 . Memory (MB): peak = 3415.332 ; gain = 726.402 ; free physical = 1058 ; free virtual = 137420
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:32 ; elapsed = 00:02:41 . Memory (MB): peak = 3502.730 ; gain = 813.801 ; free physical = 944 ; free virtual = 137400
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:33 ; elapsed = 00:02:42 . Memory (MB): peak = 3502.730 ; gain = 813.801 ; free physical = 937 ; free virtual = 137394
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:47 ; elapsed = 00:02:56 . Memory (MB): peak = 3502.730 ; gain = 813.801 ; free physical = 864 ; free virtual = 137320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:49 ; elapsed = 00:02:58 . Memory (MB): peak = 3502.730 ; gain = 813.801 ; free physical = 872 ; free virtual = 137329
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:51 ; elapsed = 00:03:00 . Memory (MB): peak = 3502.730 ; gain = 813.801 ; free physical = 873 ; free virtual = 137329
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:52 ; elapsed = 00:03:01 . Memory (MB): peak = 3502.730 ; gain = 813.801 ; free physical = 869 ; free virtual = 137326
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY8 | 13346|
+|3     |LUT1   | 22334|
+|4     |LUT2   | 25886|
+|5     |LUT3   | 43555|
+|6     |LUT4   | 45848|
+|7     |LUT5   | 11052|
+|8     |LUT6   |  8737|
+|9     |FDRE   |  2068|
+|10    |IBUF   |   971|
+|11    |OBUF   |    33|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------+---------------------+-------+
+|      |Instance         |Module               |Cells  |
++------+-----------------+---------------------+-------+
+|1     |top              |                     | 173831|
+|2     |  DUT_comparator |comparator           |   2928|
+|3     |  DUT_layer0     |layer0_tcb_121x16x10 |  87655|
+|4     |  DUT_layer2     |layer2_tcb_121x16x10 |  21919|
++------+-----------------+---------------------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:52 ; elapsed = 00:03:01 . Memory (MB): peak = 3502.730 ; gain = 813.801 ; free physical = 869 ; free virtual = 137326
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 49 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:56 ; elapsed = 00:03:02 . Memory (MB): peak = 3506.641 ; gain = 817.711 ; free physical = 8034 ; free virtual = 144490
+Synthesis Optimization Complete : Time (s): cpu = 00:02:56 ; elapsed = 00:03:02 . Memory (MB): peak = 3506.641 ; gain = 817.711 ; free physical = 8058 ; free virtual = 144489
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3639.559 ; gain = 0.000 ; free physical = 7841 ; free virtual = 144273
+INFO: [Netlist 29-17] Analyzing 14318 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3825.949 ; gain = 0.000 ; free physical = 7718 ; free virtual = 144150
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 972 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 971 instances
+
+Synth Design complete, checksum: c4a7606d
+INFO: [Common 17-83] Releasing license: Synthesis
+127 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:35 ; elapsed = 00:03:37 . Memory (MB): peak = 3825.949 ; gain = 1137.020 ; free physical = 8070 ; free virtual = 144502
+INFO: [Common 17-1381] The checkpoint '/home/kuanyu/Desktop/TCB_test/Different_net/tcb_axi_stream_succeed/py_fashionMNIST/py/vivado/net2_prj/net2_prj.runs/synth_1/top_tcb_121_16_10.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 3897.984 ; gain = 72.035 ; free physical = 7995 ; free virtual = 144498
+INFO: [runtcl-4] Executing : report_utilization -file top_tcb_121_16_10_utilization_synth.rpt -pb top_tcb_121_16_10_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 14 14:12:06 2023...
+[Tue Feb 14 14:12:17 2023] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:04:06 ; elapsed = 00:04:10 . Memory (MB): peak = 4751.543 ; gain = 0.000 ; free physical = 10312 ; free virtual = 146517
+wating for synthesis......
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xczu7ev-ffvc1156-2-e
+Netlist sorting complete. Time (s): cpu = 00:00:00.98 ; elapsed = 00:00:00.98 . Memory (MB): peak = 4861.793 ; gain = 0.000 ; free physical = 10124 ; free virtual = 146329
+INFO: [Netlist 29-17] Analyzing 14317 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5053.012 ; gain = 0.000 ; free physical = 9967 ; free virtual = 146172
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 971 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 971 instances
+
+open_run: Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 5053.012 ; gain = 301.469 ; free physical = 9967 ; free virtual = 146172
+net2_prj finished...
+# puts "finishing the synthesis process"
+finishing the synthesis process
+# exit
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 14 14:12:38 2023...

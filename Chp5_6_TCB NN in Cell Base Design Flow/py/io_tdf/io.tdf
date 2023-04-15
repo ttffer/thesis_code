@@ -1,0 +1,67 @@
+set_pad_physical_constraints -side 1 -pad_name cornerUL
+set_pad_physical_constraints -side 2 -pad_name cornerUR
+set_pad_physical_constraints -side 3 -pad_name cornerLR
+set_pad_physical_constraints -side 4 -pad_name cornerLL
+
+set_pad_physical_constraints -side 1 -pad_name ipad_in22   -order 1 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 1 -pad_name core_vcc2   -order 2 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 1 -pad_name ipad_in26   -order 3 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 1 -pad_name opad_out43   -order 4 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 1 -pad_name ipad_in25   -order 5 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 1 -pad_name io_vcc4   -order 6 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 1 -pad_name ipad_in11   -order 7 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 1 -pad_name ipad_in30   -order 8 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 1 -pad_name ipad_in20   -order 9 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 1 -pad_name io_gnd1   -order 10 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 1 -pad_name ipad_in33   -order 11 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 1 -pad_name ipad_in1   -order 12 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 1 -pad_name ipad_in29   -order 13 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 1 -pad_name ipad_in15   -order 14 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 1 -pad_name ipad_in7   -order 15 -min_left_iospace 16 -min_right_iospace 16
+
+set_pad_physical_constraints -side 2 -pad_name io_gnd4   -order 1 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 2 -pad_name ipad_in16   -order 2 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 2 -pad_name io_vcc1   -order 3 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 2 -pad_name ipad_in13   -order 4 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 2 -pad_name ipad_in10   -order 5 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 2 -pad_name io_vcc5   -order 6 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 2 -pad_name ipad_in14   -order 7 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 2 -pad_name ipad_in12   -order 8 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 2 -pad_name core_gnd2   -order 9 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 2 -pad_name ipad_in21   -order 10 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 2 -pad_name opad_out41   -order 11 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 2 -pad_name io_vcc3   -order 12 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 2 -pad_name ipad_in36   -order 13 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 2 -pad_name ipad_in23   -order 14 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 2 -pad_name io_vcc2   -order 15 -min_left_iospace 16 -min_right_iospace 16
+
+set_pad_physical_constraints -side 3 -pad_name ipad_in35   -order 1 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 3 -pad_name ipad_in19   -order 2 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 3 -pad_name opad_out42   -order 3 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 3 -pad_name ipad_in9   -order 4 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 3 -pad_name io_gnd2   -order 5 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 3 -pad_name ipad_in31   -order 6 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 3 -pad_name ipad_in17   -order 7 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 3 -pad_name ipad_in4   -order 8 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 3 -pad_name opad_out37   -order 9 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 3 -pad_name ipad_in2   -order 10 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 3 -pad_name ipad_in5   -order 11 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 3 -pad_name ipad_in27   -order 12 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 3 -pad_name opad_out40   -order 13 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 3 -pad_name ipad_in3   -order 14 -min_left_iospace 16 -min_right_iospace 16
+
+set_pad_physical_constraints -side 4 -pad_name core_vcc1   -order 1 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 4 -pad_name ipad_in8   -order 2 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 4 -pad_name ipad_in24   -order 3 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 4 -pad_name ipad_in32   -order 4 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 4 -pad_name io_gnd5   -order 5 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 4 -pad_name ipad_in34   -order 6 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 4 -pad_name opad_out39   -order 7 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 4 -pad_name ipad_in0   -order 8 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 4 -pad_name ipad_in28   -order 9 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 4 -pad_name core_gnd1   -order 10 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 4 -pad_name ipad_in18   -order 11 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 4 -pad_name ipad_in6   -order 12 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 4 -pad_name opad_out38   -order 13 -min_left_iospace 16 -min_right_iospace 16
+set_pad_physical_constraints -side 4 -pad_name io_gnd3   -order 14 -min_left_iospace 16 -min_right_iospace 16
+
